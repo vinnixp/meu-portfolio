@@ -1,0 +1,158 @@
+/* Configurações do site*/
+
+@import url('https://fonts.googleapis.com/css2? family= Inter:wght@200;300;400;500 & family= Poppins:wght@200;300;500;600 & family= Ubuntu:ital,wght@0,300;0,400;1,300;1,500 & display=swap');
+
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --colorOne: #010300;
+    --colorTwo: #314c53;
+    --colorThree: #5a7f78;
+    --colorFour: #bbdec6;
+    --colorFire: #f7f8fc;
+}
+
+
+/* Conteúdo do site*/
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    background: radial-gradient(circle,rgb(61, 58, 159) 100%, rgb(80, 2, 116) 98% ) ;
+}
+   
+.links{
+    font-size: 1.05em;
+    display: flex;
+    font-weight: 400; 
+    
+}
+    
+.links li{
+    list-style: none;
+    padding: 10px;
+}
+
+li a{
+    text-decoration: none;
+    color: var(--colorFire);
+    transition: 2s;
+}
+
+li a:hover{
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+}
+
+.content-box h1{
+    color: var(--colorFire);
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.content-box h2{
+    color: var(--colorFire);
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.circle{
+    position: relative;
+    width: 345px;
+    height: 345px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.circle::before{
+    content: ' ';
+    position: absolute;
+    inset: -90px 0 ;
+    background: linear-gradient(300deg, orange,#ffffff, #00bfff );
+    transition: 0.6s;
+    animation: rotate 2.5s linear infinite;
+    z-index: 3;
+
+}
+
+.circle:hover:before{
+    inset: -20px 120px;
+    animation: rotate 2.5s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.circle img{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+
+.text-animation{
+    animation: type 3s steps(40, end);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--colorFire);
+}
+
+@keyframes typing{
+    from {width: 0;}
+}
+
+.sci{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;  
+}
+
+li{
+    list-style: none;
+}
+
+.sci li a{
+    
+    font-size: 2em;
+    color: var(--colorFire);
+    margin: 0 10px;
+}
+
+.sci li a i{
+    transition: 0.5s;
+}
+
+.sci li a i:hover {
+    transform: translateY(-15px);
+}
