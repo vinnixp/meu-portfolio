@@ -16,25 +16,54 @@
     --colorFire: #f7f8fc;
 }
 
+/*Área de cabeçalho*/
+
+
+.nav-bar{
+    display: flex;
+    height: 10vh;
+    position: fixed;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: 2px 7px 9px rgb(0, 0, 0, 0.6); 
+    flex-direction: column;
+    text-align: left;
+    background:radial-gradient(circle,rgb(61, 58, 159) 100%, rgb(80, 2, 116) 98% );
+    width: 100%;
+    margin-bottom: 2rem;
+
+}
+
+
+
 
 /* Conteúdo do site*/
 
 body{
     
     width: 100%;
-    background: var(--colorThree);
+    
+    
     display: flex;
     flex-direction: column;
+    
+    
+}
+
+.line{
+    border: 2px solid white;
 }
 
 .container{
-    position: relative;
+    
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    
+   
+    flex-direction: column;
     height: 100vh;
-    width: 100%;
-    padding: 20px;
+    width: 100%; 
+    
+    
     background: radial-gradient(circle,rgb(61, 58, 159) 100%, rgb(80, 2, 116) 98% ) ;
     
 }
@@ -65,13 +94,22 @@ li a:hover{
 
 .content{
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: row;
+    
     height: 100%;
     width: 100%;
     text-align: left;
+    padding: 3rem;
 }
 
+
+
+.content-box{
+    margin-top: 1rem ;
+    
+}
 .content-box h1{
     color: var(--colorFire);
     font-size: 2.5em;
@@ -82,6 +120,11 @@ li a:hover{
     color: var(--colorFire);
     font-size: 2em;
     font-weight: 500;
+}
+
+
+.right{
+    margin-top: 3rem;
 }
 
 .circle{
@@ -140,10 +183,15 @@ li a:hover{
     from {width: 0;}
 }
 
+
+
+
 .sci{
     display: flex;
+    margin-bottom: 2rem;
+    
     align-items: center;
-    justify-content: start;
+    
     width: 100%;  
 }
 
@@ -166,9 +214,15 @@ li{
     transform: translateY(-15px);
 }
 
+
+/* Área de Sobre mim*/
 .main{
     height: 100vh;
     width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    
    
     
 }
@@ -178,8 +232,12 @@ li{
 .about{
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    border-top: 0.3rem solid rgb(255, 255, 255);
+    align-items: center;
+
+    margin-top: 2rem;
+    
+    
+    
     background: radial-gradient(circle,rgb(61, 58, 159) 100%, rgb(80, 2, 116) 98% ) ;
     width: 100%;
     height: 100vh;
@@ -191,8 +249,9 @@ li{
 }
 
 .title{
-    margin-top: 1.5rem;
+    
     display: flex;
+    
     align-items: center;
     justify-content: center;
     
@@ -222,7 +281,8 @@ li{
 .evento img{
     width: 160px;
     height: 160px;
-    border-radius: 50%;
+    margin-left: 1rem;
+    
 }
 
 .evento .description{
@@ -242,11 +302,13 @@ li{
 
 /*Área de projetos */
 
+
+
 .projects{
+    
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    border-top: 0.3rem solid rgb(255, 255, 255);
     background: radial-gradient(circle,rgb(61, 58, 159) 100%, rgb(80, 2, 116) 98% ) ;
     width: 100%;
     height: 100vh;
@@ -258,7 +320,7 @@ li{
 .title h2{
     font-size: 2em;
     font-weight: 600;
-    
+    margin-top: 3rem;
    
 }
 
@@ -267,12 +329,19 @@ li{
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 1rem;
     row-gap: 1rem;
-    
-    margin-bottom: 1rem;
-    width: 100%;
-    
-    margin-top: 1rem;
 
+    background: radial-gradient(circle,rgb(61, 58, 159) 100%, rgb(80, 2, 116) 98% );
+    margin-top: 1rem;
+    height: 70vh;
+    
+    overflow-y: auto;
+    border-radius: 10px;
+
+}
+
+.container-projects::-webkit-scrollbar{
+    width: 0;
+    
 }
 
 .box-project{
@@ -280,13 +349,16 @@ li{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     padding: 1rem;
     cursor: pointer;
-    height: 12rem;
+    height: 15rem;
     background: radial-gradient(rgba(0, 0, 0, 0.1) 20%, rgba(172, 172, 172, 0.2)  ) ;
     box-shadow: rgba(0, 0, 0, 0.80) 0px 20px 30px -10px;
     border-radius: 10%;
     transition: 0.5s;
+    margin: 1.5rem;
+
 }
 
 .box-project:hover{
@@ -297,6 +369,7 @@ li{
     width: 180px;
     height: 150px;
     filter: drop-shadow(rgb(0, 0, 0, 0.80) 2px 3px 10px  );
+    border-radius: 10px;
 }
 
 .box-project h2{
