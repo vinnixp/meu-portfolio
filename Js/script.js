@@ -1,5 +1,5 @@
 var texts = [
-  "Desenvolvedor Front-And",
+  "Programador Front-End",
   "Youtuber"
 ];
 var textIndex = 0;
